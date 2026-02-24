@@ -1,5 +1,14 @@
 import { Link } from 'react-router-dom'
 import { sectors } from '../data/eboard'
+import { events } from '../data/events'
+
+function isPast(dateStr) {
+  const [year, month, day] = dateStr.split('-').map(Number)
+  const d = new Date(year, month - 1, day)
+  const today = new Date()
+  today.setHours(0, 0, 0, 0)
+  return d < today
+}
 
 const sectorIcons = {
   academic: '📚',
@@ -89,6 +98,52 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Upcoming events teaser */}
+      {events.filter((e) => !isPast(e.date)).length > 0 && (
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-bold text-white">Upcoming Events</h2>
+            <Link to="/events" className="text-ieee-blue text-sm font-medium hover:underline underline-offset-4">
+              View all →
+            </Link>
+          </div>
+          <div className="flex flex-col gap-4">
+            {events.filter((e) => !isPast(e.date)).slice(0, 2).map((e) => {
+              const [year, month, day] = e.date.split('-').map(Number)
+              const dateLabel = new Date(year, month - 1, day).toLocaleDateString('en-US', {
+                weekday: 'short', month: 'short', day: 'numeric',
+              })
+              return (
+                <Link
+                  key={e.id}
+                  to="/events"
+                  className="bg-ieee-dark-card border border-ieee-border rounded-xl px-6 py-4 flex items-center gap-6 hover:border-ieee-blue/50 hover:shadow-ieee-glow transition-all duration-200"
+                >
+                  <div className="text-center min-w-[56px]">
+                    <p className="text-ieee-blue font-bold text-lg leading-none">
+                      {new Date(year, month - 1, day).toLocaleDateString('en-US', { day: 'numeric' })}
+                    </p>
+                    <p className="text-gray-500 text-xs uppercase tracking-wide">
+                      {new Date(year, month - 1, day).toLocaleDateString('en-US', { month: 'short' })}
+                    </p>
+                  </div>
+                  <div className="w-px h-10 bg-ieee-border" />
+                  <div className="flex-1 min-w-0">
+                    <p className="text-white font-semibold truncate">{e.title}</p>
+                    <p className="text-gray-400 text-sm">{e.time} · {e.location}</p>
+                  </div>
+                  {e.tag && (
+                    <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-ieee-blue/10 text-ieee-blue border border-ieee-blue/30 hidden sm:block">
+                      {e.tag}
+                    </span>
+                  )}
+                </Link>
+              )
+            })}
+          </div>
+        </section>
+      )}
 
       {/* Sector cards */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 pb-24">

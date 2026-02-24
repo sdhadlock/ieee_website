@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
 import EBoard from './pages/EBoard'
+import Events from './pages/Events'
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/events" element={<Events />} />
             <Route path="/eboard" element={<EBoard />} />
           </Routes>
         </div>
