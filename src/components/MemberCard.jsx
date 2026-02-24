@@ -16,8 +16,6 @@ export default function MemberCard({ name, role, major, year }) {
       <div className="text-center">
         <h3 className="text-white font-semibold text-lg leading-tight">{name}</h3>
         <p className="text-ieee-blue text-sm font-medium mt-1">{role}</p>
-        <p className="text-gray-400 text-xs mt-2">{major}</p>
-        <p className="text-gray-500 text-xs">Class of {year}</p>
       </div>
     </div>
   )

@@ -100,7 +100,7 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {sectors.map(({ id, title, description }) => (
+          {sectors.filter(({ id }) => id !== 'leadership').map(({ id, title, description }) => (
             <Link
               key={id}
               to={`/eboard#${id}`}
