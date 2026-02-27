@@ -15,7 +15,7 @@ export const sectors = [
     title: 'Academic Committee',
     description: 'Organizing workshops, study sessions, and technical seminars to support members academically.',
     members: [
-      { name: 'Benny Zhu',            role: 'Academic Director' },
+      { name: 'Benny Zhu',             role: 'Academic Director' },
       { name: 'Farah Abdullah',        role: 'Member' },
       { name: 'Dalton Luce',           role: 'Member' },
       { name: 'Isabella Frank',        role: 'Member' },
@@ -27,7 +27,7 @@ export const sectors = [
       { name: 'Anya Knudsen',          role: 'Member' },
       { name: 'Aishwarya Marieswaran', role: 'Member' },
       { name: 'Arbab Hossain',         role: 'Member' },
-      { name: 'Renzzo Antayhua',        role: 'Member' },
+      { name: 'Renzzo Antayhua',       role: 'Member' },
     ],
   },
   {

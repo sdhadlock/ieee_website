@@ -13,17 +13,20 @@ export default function Navbar() {
 
   const navLinkClass = ({ isActive }) =>
     `text-sm font-medium transition-colors duration-200 ${
-      isActive ? 'text-ieee-blue' : 'text-gray-300 hover:text-white'
+      isActive ? 'text-ieee-teal' : 'text-ieee-navy hover:text-ieee-teal'
     }`
 
   return (
-    <nav className="sticky top-0 z-50 bg-ieee-navy/95 backdrop-blur border-b border-ieee-border">
+    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-ieee-border shadow-ieee-card">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <NavLink to="/" className="flex items-center gap-2">
-            <span className="text-ieee-blue font-bold text-xl tracking-tight">IEEE</span>
-            <span className="text-white font-semibold text-sm hidden sm:block">Cornell</span>
+          <NavLink to="/" className="flex items-center">
+            <img
+              src="/logos/ieee-teal-logo.png"
+              alt="IEEE at Cornell"
+              className="h-10"
+            />
           </NavLink>
 
           {/* Desktop links */}
@@ -37,7 +40,7 @@ export default function Navbar() {
               href="https://cornellieee.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-medium px-4 py-1.5 rounded-md bg-ieee-blue/10 border border-ieee-blue/40 text-ieee-blue hover:bg-ieee-blue hover:text-white transition-all duration-200"
+              className="text-sm font-medium px-4 py-1.5 rounded-md bg-ieee-teal text-white hover:bg-ieee-dark transition-all duration-200"
             >
               Join Us
             </a>
@@ -45,7 +48,7 @@ export default function Navbar() {
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden text-gray-300 hover:text-white focus:outline-none"
+            className="md:hidden text-ieee-navy hover:text-ieee-teal focus:outline-none"
             onClick={() => setOpen((o) => !o)}
             aria-label="Toggle menu"
           >
@@ -62,7 +65,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden border-t border-ieee-border bg-ieee-navy px-4 pb-4 pt-2 flex flex-col gap-3">
+        <div className="md:hidden border-t border-ieee-border bg-white px-4 pb-4 pt-2 flex flex-col gap-3">
           {links.map(({ to, label }) => (
             <NavLink
               key={to}
@@ -78,7 +81,7 @@ export default function Navbar() {
             href="https://cornellieee.org"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium text-ieee-blue"
+            className="text-sm font-medium text-ieee-teal"
             onClick={() => setOpen(false)}
           >
             Join Us →

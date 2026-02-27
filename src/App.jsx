@@ -9,7 +9,7 @@ import Events from './pages/Events'
 export default function App() {
   return (
     <HashRouter>
-      <div className="min-h-screen flex flex-col bg-ieee-navy">
+      <div className="min-h-screen flex flex-col bg-white">
         <Navbar />
         <div className="flex-1">
           <Routes>

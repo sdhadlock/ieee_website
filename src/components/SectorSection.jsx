@@ -4,11 +4,11 @@ export default function SectorSection({ id, title, description, members }) {
   return (
     <section id={id} className="scroll-mt-20">
       <div className="mb-8">
-        <h2 className="text-2xl font-bold text-white pl-4 border-l-4 border-ieee-blue">
+        <h2 className="text-2xl font-bold text-ieee-navy pl-4 border-l-4 border-ieee-teal">
           {title}
         </h2>
         {description && (
-          <p className="text-gray-400 mt-3 pl-5">{description}</p>
+          <p className="text-gray-500 mt-3 pl-5">{description}</p>
         )}
       </div>
 
