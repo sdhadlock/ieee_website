@@ -22,10 +22,17 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <NavLink to="/" className="flex items-center">
+            {/* Mobile */}
+            <img
+              src={`${import.meta.env.BASE_URL}logos/ieee-teal-logo.png`}
+              alt="IEEE at Cornell"
+              className="h-10 md:hidden"
+            />
+            {/* Desktop */}
             <img
               src={`${import.meta.env.BASE_URL}logos/ieee-blue-text-logo.png`}
               alt="IEEE at Cornell"
-              className="h-10"
+              className="h-10 hidden md:block"
             />
           </NavLink>
 
