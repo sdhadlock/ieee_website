@@ -18,12 +18,12 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-ieee-border shadow-ieee-card">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto pl-1 pr-4 sm:pr-6 lg:pr-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <NavLink to="/" className="flex items-center">
             <img
-              src={`${import.meta.env.BASE_URL}logos/ieee-lightblue-text-logo.png`}
+              src={`${import.meta.env.BASE_URL}logos/ieee-blue-text-logo.png`}
               alt="IEEE at Cornell"
               className="h-10"
             />
