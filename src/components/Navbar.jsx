@@ -18,7 +18,7 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-ieee-border shadow-ieee-card">
-      <div className="max-w-6xl mx-auto pl-1 pr-4 sm:pr-6 lg:pr-8">
+      <div className="w-full pl-1 pr-4 sm:pr-6 lg:pr-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <NavLink to="/" className="flex items-center">
