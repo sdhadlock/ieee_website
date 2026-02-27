@@ -23,7 +23,7 @@ export default function Navbar() {
           {/* Logo */}
           <NavLink to="/" className="flex items-center">
             <img
-              src={`${import.meta.env.BASE_URL}logos/ieee-teal-logo.png`}
+              src={`${import.meta.env.BASE_URL}logos/ieee-lightblue-text-logo.png`}
               alt="IEEE at Cornell"
               className="h-10"
             />
