@@ -8,7 +8,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <img
-              src="/logos/ieee-white-logo.png"
+              src={`${import.meta.env.BASE_URL}logos/ieee-white-logo.png`}
               alt="IEEE at Cornell"
               className="h-10 mb-2"
             />

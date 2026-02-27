@@ -32,7 +32,7 @@ export default function Home() {
           {/* Logo */}
           <div className="flex justify-center mb-8">
             <img
-              src="/logos/ieee-white-logo.png"
+              src={`${import.meta.env.BASE_URL}logos/ieee-white-logo.png`}
               alt="IEEE at Cornell"
               className="h-20 sm:h-24"
             />
